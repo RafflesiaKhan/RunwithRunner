@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:baselineAligned="false"
+
+    android:orientation="vertical"
+ 
+    tools:context="com.ku.runner.activity.RunnerActivity" android:background="@color/white" >
+
+    
+	<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+       android:paddingTop="10dp"
+            android:text="Set Time in 24 Hour format" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal" >
+ 			
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:labelFor="@+id/txtStartTime"
+            android:text="@string/startTime" />
+
+        <EditText
+            android:id="@+id/txtStartTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:ems="10"
+            android:inputType="time"
+            android:onClick="showTimePickerDialog" >
+
+            <requestFocus />
+        </EditText>	<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+       android:paddingTop="10dp"
+            android:text="HH:mm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+       
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:labelFor="@+id/txtStopTime"
+            android:text="@string/stopTime" />
+
+        <EditText
+            android:id="@+id/txtStopTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:ems="10"
+            android:inputType="time"
+            android:onClick="showTimePickerDialog" >
+        </EditText>	<TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+       android:paddingTop="10dp"
+            android:text="HH:mm" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="15dp"
+            android:layout_weight="0.47"
+            android:background="@color/greenb"
+            android:ems="5"
+            android:onClick="StartGame"
+            android:text="@string/start" />
+
+        <Button
+            android:id="@+id/btnStart_Actoivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.63"
+            android:background="@color/greenb"
+            android:ems="5"
+            android:onClick="StartGameActivity"
+            android:text="@string/start_activity" />
+    </LinearLayout>
+    
+    <LinearLayout  android:layout_width="fill_parent" android:id="@+id/statusscreeen" 
+        android:visibility="gone" android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content" android:orientation="vertical">
+        <TextView   android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Today's Performance"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" android:weightSum="3" android:layout_marginTop="25dp">
+        
+           <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" android:layout_weight="1">
+            <ImageView   android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:src="@drawable/time"/>
+            <TextView   android:id="@+id/timeV" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+               </LinearLayout>
+        
+           <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" android:layout_weight="1">
+            <ImageView   android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/distance"/>
+            <TextView android:id="@+id/distanceV"   android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+               </LinearLayout>
+               <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" android:layout_weight="1">
+            <ImageView   android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:src="@drawable/calorieburn"/>
+            <TextView   android:id="@+id/calorieV"  android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+               </LinearLayout>
+             
+        </LinearLayout>
+
+         <Button
+             android:id="@+id/btnStop"
+             android:layout_width="193dp"
+             android:layout_height="wrap_content"
+             android:ems="5"
+             android:background="@color/greenb"
+             android:layout_gravity="center"
+             android:onClick="Return"
+             android:text="Return >>" />
+
+    </LinearLayout>
+</LinearLayout>

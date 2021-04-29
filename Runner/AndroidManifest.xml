@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ku.runner"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-feature android:name="android.hardware.sensor.stepcounter" />
+    <uses-feature android:name="android.hardware.sensor.stepdetector" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name=".MenuItemListActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name=".MenuItemDetailActivity"
+            android:label="@string/title_menuitem_detail"
+            android:parentActivityName=".MenuItemListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.runner.MenuItemListActivity" />
+        </activity>
+        <activity
+            android:name=".activity.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.RunnerActivity"
+            android:label="Lets Run"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <service android:name=".DetectedActivitiesIntentService" >
+        </service>
+
+        <activity
+            android:name=".DectectedActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".DetectorActivity"
+            android:label="Activity Recognition"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.PlayActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".activity.MainActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ProfileActivity"
+            android:label="@string/title_activity_profile"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".activity.GraphActivity"
+            android:label="Graph"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name=".activity.OverviewActivity"
+            android:label="@string/title_activity_overview" >
+        </activity>
+    </application>
+
+</manifest>

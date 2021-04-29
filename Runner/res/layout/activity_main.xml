@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+    android:layout_height="match_parent" android:background="@drawable/green">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_centerInParent="true"
+    android:layout_centerVertical="true" 
+    android:orientation="vertical" android:gravity="center">
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter" 
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_launcher" />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        android:layout_marginBottom="20dp"
+        android:text="Hey Lets Loose Some Weight!!!!"
+        />
+
+    <Button
+        android:layout_width="205dp"
+        android:layout_height="60dp"
+        android:background="@color/purple"
+        android:onClick="RunNow"
+        android:text="Run >>"
+        android:textColor="@color/white" />
+
+</LinearLayout>
+</RelativeLayout>
